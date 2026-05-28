@@ -389,8 +389,9 @@ class Handler(BaseHTTPRequestHandler):
 
 def main() -> None:
     port = int(os.environ.get("PORT", "8765"))
-    server = ThreadingHTTPServer(("127.0.0.1", port), Handler)
-    print(f"예배 자막 PPTX 생성기: http://127.0.0.1:{port}")
+    host = "0.0.0.0" if os.environ.get("RENDER") else "127.0.0.1"
+    server = ThreadingHTTPServer((host, port), Handler)
+    print(f"예배 자막 PPTX 생성기: http://{host}:{port}")
     server.serve_forever()
 
 

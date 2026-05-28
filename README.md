@@ -28,6 +28,17 @@ python app.py
 
 브라우저에서 `http://127.0.0.1:8765`로 접속합니다.
 
+## Render 배포
+
+Render에서 Web Service를 만들고 GitHub 저장소를 연결합니다.
+
+```text
+Build Command: pip install -r requirements.txt
+Start Command: python app.py
+```
+
+저장소의 `.python-version` 파일로 Python 3.12를 사용하게 지정되어 있습니다.
+
 ## 사용
 
 1. 자막 스타일로 쓸 PPTX 파일을 업로드합니다.
